@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   try {
     // Generate valid SvelteKit cache-busting timestamp (critical fix)
     const invalidatedParam = Date.now().toString();
-    const url = `https://stockanalysis.com/news/__data.json?x-sveltekit-trailing-slash=1&x-sveltekit-invalidated=${invalidatedParam}`;
+    const url = `https://stockanalysis.com/news/__data.json`;
 
     const response = await fetch(url, {
       headers: {
